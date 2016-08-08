@@ -1,0 +1,25 @@
+/*
+ * Hisilicon Ltd Balong SOC
+ */
+
+
+
+/{
+	ipc_hisi_modem:ipc_hisi_modem@FDF21000 {
+		#address-cells = <2>;
+		#size-cells = <2>;
+		compatible = "hisilicon,ipc_balong_app";
+		reg = <0x0 0xFDF21000 0x0 0x1000>;
+		interrupts = <0 186 4>, <0 187 4>;
+		status = "ok";
+	};
+	
+	ipc_hisi_modem_s:ipc_hisi_modem_s@FDF22000 {
+		#address-cells = <2>;
+		#size-cells = <2>;
+		compatible = "hisilicon,ipc_balong_app_s";
+		reg = <0x0 0xFDF22000 0x0 0x1000>;
+		interrupts = <0 192 4>, <0 193 4>;
+		status = "ok";
+	};	
+};
