@@ -21,7 +21,7 @@
 #ifdef DFMO_REQUEST_QOS_CPU_DMA_LATENCY
 #include <linux/pm_qos.h>
 #endif
-#include "../../../../../../../kernel/drivers/devfreq/governor.h"
+#include "../../devfreq/governor.h"
 
 
 /* Default constants for DevFreq-Mali-Ondemand (DFMO) */
