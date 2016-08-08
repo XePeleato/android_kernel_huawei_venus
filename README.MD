@@ -1,6 +1,6 @@
 # Huawei P9 Lite Kernel
 
--How to build
+- How to build
 
 I have included the toolchain, so just run './build.sh' and you're good to go.
 
