@@ -15,6 +15,12 @@ CPPFLAGS_vmlinux.lds = -DTEXT_OFFSET=$(TEXT_OFFSET)
 OBJCOPYFLAGS	:=-O binary -R .note -R .note.gnu.build-id -R .comment -S
 GZFLAGS		:=-9
 
+ifdef PKG_CONFIG_SYSROOT_DIR
+CC  = $(CROSS_COMPILE)gcc --sysroot=$(PKG_CONFIG_SYSROOT_DIR)
+else
+CC  = $(CROSS_COMPILE)gcc
+endif
+
 LIBGCC 		:= $(shell $(CC) $(KBUILD_CFLAGS) -print-libgcc-file-name)
 
 KBUILD_DEFCONFIG := defconfig
